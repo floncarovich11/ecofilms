@@ -1,0 +1,43 @@
+[
+    {
+      "title": "365 dias",
+      "description": "A história segue Laura, uma jovem que é sequestrada pelo mafioso Massimo durante uma viagem à Sicília. Ele lhe dá 365 dias para que ela se apaixone por ele.",
+      "year": "2021",
+      "ageRating": "A18",
+      "duration": "1 hr e 40 min",
+      "imagePath": "assets/img/365diasreproducao.jpeg"
+      
+    },
+    {
+      "title": "Outro Filme",
+      "description": "Descrição do outro filme...",
+      "year": "2023",
+      "ageRating": "A16",
+      "duration": "2 hr",
+      "imagePath": "assets/img/outrofilme.jpeg"
+    },
+    {
+      "title": "Gente Grande 2",
+      "description": "A sequência de Gente Grande onde os personagens principais enfrentam novos desafios.",
+      "year": "2013",
+      "ageRating": "A10",
+      "duration": "1 hr e 40 min",
+      "imagePath": "assets/img/gentegrande2.png"
+    },
+    {
+      "title": "Jumanji",
+      "description": "Quando um grupo de jovens encontra um jogo mágico de Jumanji, eles são transportados para uma aventura épica.",
+      "year": "1995",
+      "ageRating": "A10",
+      "duration": "1 hr e 40 min",
+      "imagePath": "assets/img/jumanji.png"
+    },
+    {
+      "title": "Titanic",
+      "description": "A história de amor entre Jack e Rose a bordo do icônico navio Titanic.",
+      "year": "1997",
+      "ageRating": "A12",
+      "duration": "3 hr e 14 min",
+      "imagePath": "assets/img/titanic.jpg"
+    }
+  ]

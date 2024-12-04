@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "859604174148",
+    "project_id": "projetologin-3ff82",
+    "storage_bucket": "projetologin-3ff82.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859604174148:android:5c5a95776d57be04998311",
+        "android_client_info": {
+          "package_name": "br.com.felipeloncarovich.ecofilms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtWR4J7uTZpVMfiUnNhGqa38mnfOrMNXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859604174148:android:23c890bfc90536b5998311",
+        "android_client_info": {
+          "package_name": "com.example.firebaselogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtWR4J7uTZpVMfiUnNhGqa38mnfOrMNXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859604174148:android:ee4975e562060a3d998311",
+        "android_client_info": {
+          "package_name": "com.example.projetologin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtWR4J7uTZpVMfiUnNhGqa38mnfOrMNXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
