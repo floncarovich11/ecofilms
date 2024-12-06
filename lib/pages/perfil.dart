@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ecofilms/pages/home.dart';
 
 class Perfil extends StatefulWidget {
   @override
@@ -32,7 +31,6 @@ class _PerfilState extends State<Perfil> {
                 height: 90,
               ),
             ),
-            
             // Texto "Quem está assistindo?"
             Text(
               'Quem está assistindo?',
@@ -43,7 +41,6 @@ class _PerfilState extends State<Perfil> {
               ),
             ),
             SizedBox(height: 30),
-            
             // Perfis
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
@@ -76,8 +73,8 @@ class _PerfilState extends State<Perfil> {
   Widget _buildProfile(String name, String imagePath, BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navega para a tela Home ao clicar no perfil
-        Navigator.pushNamed(context, '/home');
+        // Navega para a tela Home ao clicar no perfil, enviando a imagem como argumento
+        Navigator.pushNamed(context, '/home', arguments: imagePath);
       },
       child: Column(
         children: [

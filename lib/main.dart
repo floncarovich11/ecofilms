@@ -1,8 +1,9 @@
+import 'package:ecofilms/pages/baixados.dart';
+import 'package:ecofilms/pages/embreve.dart';
 import 'package:ecofilms/pages/perfil.dart';
 import 'package:ecofilms/pages/pesquisa.dart';
 import 'package:ecofilms/pages/player.dart';
 import 'package:ecofilms/pages/reproducao.dart';
-import 'package:ecofilms/pages/player.dart';
 import 'package:ecofilms/shared/style.dart';
 import 'package:flutter/material.dart';
 import 'package:ecofilms/pages/cadastro.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       
-      initialRoute: "/",
+      initialRoute: "/Baixados",
       routes: {
       '/' : (context) => Splash(),
       '/login' : (context) => Login(),
@@ -42,6 +43,8 @@ class MyApp extends StatelessWidget {
       '/pesquisa' : (context) => Pesquisa(),
       '/reproducao' : (context) => Reproducao(), 
       '/player' : (context) => YoutubeVideoPage(),
+      '/embreve' : (context) => Embreve(),
+      '/baixados' : (context) => Baixados(),
       }
     );
   }

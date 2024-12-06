@@ -70,7 +70,6 @@ class _HomeState extends State<Home> {
   'image': 'assets/img/jurassicpark.jpg',
   'reproducaoImage': 'assets/img/jurassicparkreproducao.jpg',
 },
-
   ];
 
   @override
@@ -105,6 +104,20 @@ class _HomeState extends State<Home> {
                               ],
                               stops: [0.5, 1],
                             ),
+                          ),
+                        ),
+                      ),
+                      // Foto pequena para escolher perfil
+                      Positioned(
+                        top: 40,
+                        left: 340,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/perfil'); // Tela de escolha de perfil
+                          },
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundImage: AssetImage('assets/img/perfil.jpg'), // Altere para sua imagem
                           ),
                         ),
                       ),
@@ -160,7 +173,7 @@ class _HomeState extends State<Home> {
                                       'year': '2005',
                                       'ageRating': '16',
                                       'duration': '4 temporadas',
-                                      'description': 'Michael Scofield é um homem desesperado em uma situação desesperadora. Seu irmão, Lincoln Burrows, foi condenado injustamente à pena de morte e está no corredor da morte. Com apenas alguns meses restantes, Michael comete um crime para ser enviado para a mesma prisão para ajudar Lincoln a escapar. O drama cheio de ação segue sua elaborada fuga e os desafios enfrentados após a liberdade.',
+                                      'description': 'Michael Scofield é um homem desesperado...',
                                       'image': 'assets/img/prisionbreak.png',
                                       'reproducaoImage': 'assets/img/prisionbreakreproducao.jpg',
                                     };
@@ -255,10 +268,6 @@ class _HomeState extends State<Home> {
             icon: Icon(Icons.download),
             label: 'Baixados',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.more_horiz),
-            label: 'Mais',
-          ),
         ],
         onTap: (index) {
           switch (index) {
@@ -269,13 +278,10 @@ class _HomeState extends State<Home> {
               Navigator.pushReplacementNamed(context, '/pesquisa'); // Pesquisa
               break;
             case 2:
-              Navigator.pushReplacementNamed(context, '/pesquisa'); // Em Breve
+              Navigator.pushReplacementNamed(context, '/embreve'); // Em Breve
               break;
             case 3:
-              Navigator.pushReplacementNamed(context, '/pesquisa'); // Baixados
-              break;
-            case 4:
-              Navigator.pushReplacementNamed(context, '/pesquisa'); // Mais
+              Navigator.pushReplacementNamed(context, '/baixados'); // Baixados
               break;
           }
         },

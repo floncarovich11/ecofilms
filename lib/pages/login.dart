@@ -1,4 +1,3 @@
-import 'package:ecofilms/pages/home.dart';
 import 'package:ecofilms/pages/perfil.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart'; // Importa o pacote de autenticação do Firebase

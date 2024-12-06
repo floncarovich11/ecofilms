@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Pesquisa extends StatefulWidget {
+class Baixados extends StatefulWidget {
   @override
-  State<Pesquisa> createState() => _PesquisaState();
+  State<Baixados> createState() => _BaixadosState();
 }
 
-class _PesquisaState extends State<Pesquisa> {
+class _BaixadosState extends State<Baixados> {
   TextEditingController _searchController = TextEditingController();
   List<Map<String, String>> _items = [
     {
@@ -25,51 +25,6 @@ class _PesquisaState extends State<Pesquisa> {
       'year': '2004',
       'ageRating': 'L',
       'duration': '1 hr e 38 min',
-    },
-    {
-      'title': 'Barbie Dolphin Magic',
-      'image': 'assets/img/barbie_dolphin_magic.png',
-      'reproducaoImage': 'assets/img/barbiedolphinmagicreproducao.jpg',
-      'description': 'Barbie e suas irmãs vão em uma aventura para salvar golfinhos e proteger o habitat marinho.',
-      'year': '2017',
-      'ageRating': 'L',
-      'duration': '1 hr',
-    },
-    {
-      'title': 'Carandiru',
-      'image': 'assets/img/carandiru.png',
-      'reproducaoImage': 'assets/img/carandirureproducao.jpg',
-      'description': 'História baseada em fatos reais sobre a vida e os desafios no presídio Carandiru em São Paulo.',
-      'year': '2003',
-      'ageRating': 'A16',
-      'duration': '2 hr e 25 min',
-    },
-    {
-      'title': 'O Mal que Nos Habita',
-      'image': 'assets/img/o_mal_que_nos_habita.png',
-      'reproducaoImage': 'assets/img/omalquenoshabitareproducao.jpg',
-      'description': 'Uma história de horror onde uma jovem luta para sobreviver a uma entidade maléfica em sua casa.',
-      'year': '2019',
-      'ageRating': 'A18',
-      'duration': '1 hr e 30 min',
-    },
-    {
-      'title': 'Mama',
-      'image': 'assets/img/mama.png',
-      'reproducaoImage': 'assets/img/mamareproducao.jpg',
-      'description': 'Duas meninas que desapareceram na floresta são encontradas anos depois sob os cuidados de uma entidade sobrenatural.',
-      'year': '2013',
-      'ageRating': 'A14',
-      'duration': '1 hr e 40 min',
-    },
-    {
-      'title': 'A Comédia dos Pecados',
-      'image': 'assets/img/a_comedia_dos_pecados.png',
-      'reproducaoImage': 'assets/img/acomediadospecadosreproducao.jpg',
-      'description': 'Comédia que explora situações inusitadas com personagens enfrentando dilemas morais.',
-      'year': '2018',
-      'ageRating': 'A12',
-      'duration': '1 hr e 30 min',
     },
   ];
   List<Map<String, String>> _filteredItems = [];
@@ -103,52 +58,12 @@ class _PesquisaState extends State<Pesquisa> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: Container(
-          decoration: BoxDecoration(
-            color: Color(0XFF65DC65),
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
-          child: Row(
-            children: [
-              Icon(Icons.search, color: Colors.black),
-              SizedBox(width: 1.0),
-              Expanded(
-                child: TextField(
-                  controller: _searchController,
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
-                    hintText: 'Pesquisar...',
-                    hintStyle: TextStyle(color: Color.fromARGB(137, 0, 0, 0)),
-                    border: InputBorder.none,
-                  ),
-                ),
-              ),
-              if (_searchController.text.isNotEmpty)
-                IconButton(
-                  icon: Icon(Icons.close, color: Colors.black),
-                  onPressed: () {
-                    _searchController.clear();
-                    _filterItems();
-                  },
-                ),
-            ],
-          ),
-        ),
-      ),
       body: ListView(
         padding: EdgeInsets.all(8.0),
         children: [
+          SizedBox(height: 50),
           Text(
-            'Séries e Filmes recomendados',
+            'Em breve',
             style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
