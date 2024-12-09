@@ -1,5 +1,6 @@
 import 'package:ecofilms/pages/baixados.dart';
 import 'package:ecofilms/pages/embreve.dart';
+import 'package:ecofilms/pages/global_data.dart';
 import 'package:ecofilms/pages/perfil.dart';
 import 'package:ecofilms/pages/pesquisa.dart';
 import 'package:ecofilms/pages/player.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
       '/player' : (context) => YoutubeVideoPage(),
       '/embreve' : (context) => Embreve(),
       '/baixados' : (context) => Baixados(),
-      }
+       }
     );
   }
 }

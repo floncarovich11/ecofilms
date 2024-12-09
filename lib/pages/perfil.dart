@@ -12,7 +12,6 @@ class _PerfilState extends State<Perfil> {
     {'name': 'Tomás', 'imagePath': 'assets/img/tomas.png'},
   ];
 
-  // Define o limite máximo de perfis
   final int maxProfiles = 6;
 
   @override
@@ -23,15 +22,13 @@ class _PerfilState extends State<Perfil> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Logo como imagem
             Padding(
               padding: const EdgeInsets.only(bottom: 20.0),
               child: Image.asset(
-                'assets/img/logo.png', // Substitua pelo caminho correto da imagem da logo
+                'assets/img/logo.png',
                 height: 90,
               ),
             ),
-            // Texto "Quem está assistindo?"
             Text(
               'Quem está assistindo?',
               style: TextStyle(
@@ -41,7 +38,6 @@ class _PerfilState extends State<Perfil> {
               ),
             ),
             SizedBox(height: 30),
-            // Perfis
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
               child: GridView.count(
@@ -50,11 +46,9 @@ class _PerfilState extends State<Perfil> {
                 crossAxisSpacing: 20,
                 shrinkWrap: true,
                 children: [
-                  // Perfis dinâmicos
                   ...profiles.map((profile) {
                     return _buildProfile(profile['name']!, profile['imagePath']!, context);
                   }).toList(),
-                  // Botão de adicionar perfil, só é exibido se o limite não foi atingido
                   if (profiles.length < maxProfiles)
                     GestureDetector(
                       onTap: () => _showAddProfileDialog(context),
@@ -69,11 +63,9 @@ class _PerfilState extends State<Perfil> {
     );
   }
 
-  // Função para criar um perfil individual com bordas levemente arredondadas
   Widget _buildProfile(String name, String imagePath, BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navega para a tela Home ao clicar no perfil, enviando a imagem como argumento
         Navigator.pushNamed(context, '/home', arguments: imagePath);
       },
       child: Column(
@@ -82,7 +74,7 @@ class _PerfilState extends State<Perfil> {
             width: 90,
             height: 90,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), // Bordas levemente arredondadas
+              borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                 image: AssetImage(imagePath),
                 fit: BoxFit.cover,
@@ -102,7 +94,6 @@ class _PerfilState extends State<Perfil> {
     );
   }
 
-  // Função para o botão de adicionar perfil
   Widget _buildAddProfileButton() {
     return Column(
       children: [
@@ -131,10 +122,8 @@ class _PerfilState extends State<Perfil> {
     );
   }
 
-  // Função para exibir o diálogo de adição de perfil
   void _showAddProfileDialog(BuildContext context) {
     if (profiles.length >= maxProfiles) {
-      // Mostra uma mensagem informando que o limite foi atingido
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Limite de perfis atingido.')),
       );
@@ -142,7 +131,7 @@ class _PerfilState extends State<Perfil> {
     }
 
     String newProfileName = '';
-    String newProfileImage = 'assets/img/padrao.png'; // Caminho de uma imagem padrão
+    String newProfileImage = 'assets/img/padrao.png';
 
     showDialog(
       context: context,

@@ -1,6 +1,6 @@
 import 'package:ecofilms/pages/perfil.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart'; // Importa o pacote de autenticação do Firebase
+import 'package:firebase_auth/firebase_auth.dart'; 
 import 'package:google_sign_in/google_sign_in.dart';
 
 class Login extends StatefulWidget {
@@ -10,9 +10,9 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
-  final FirebaseAuth _auth = FirebaseAuth.instance; // Instância do FirebaseAuth para autenticação
-  final TextEditingController _emailController = TextEditingController(); // Controlador para o campo de e-mail
-  final TextEditingController _passwordController = TextEditingController(); // Controlador para o campo de senha
+  final FirebaseAuth _auth = FirebaseAuth.instance; 
+  final TextEditingController _emailController = TextEditingController(); 
+  final TextEditingController _passwordController = TextEditingController(); 
 
   Future<void> _login() async {
     try {
@@ -249,7 +249,7 @@ class _LoginState extends State<Login> {
                                   ),
                                 ],
                               ),
-                          SizedBox(height: 16), // Espaçamento entre o link e o botão
+                          SizedBox(height: 16), 
                           Center(
                             child: ElevatedButton.icon(
                               onPressed: () async {

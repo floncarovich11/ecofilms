@@ -6,92 +6,107 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String? perfilImagePath;
+
   final List<Map<String, String>> filmes = [
     {
-  'title': 'Gente Grande 2',
-  'year': '2013',
-  'ageRating': '12',
-  'duration': '1h 41m',
-  'description': 'Lenny e seus amigos decidem retornar à cidade onde cresceram para oferecer uma vida mais simples para suas famílias. No entanto, a rotina pacata é interrompida por situações imprevisíveis e cômicas, como festas caóticas, reencontros emocionantes e novos desafios que testam sua amizade e habilidades como pais. O filme traz uma mistura de nostalgia, risadas e lições sobre amadurecimento e companheirismo.',
-  'image': 'assets/img/gentegrande2.png',
-  'reproducaoImage': 'assets/img/gentegrande2reproducao.jpg',
-},
-{
-  'title': 'Gigantes de Aço',
-  'year': '2011',
-  'ageRating': '12',
-  'duration': '2h 7m',
-  'description': 'Ambientado em um futuro onde humanos foram substituídos por robôs no boxe, o ex-lutador Charlie Kenton luta para encontrar propósito. Com a ajuda de seu filho Max, ele descobre um robô sucateado chamado Atom, que parece ter um espírito de luta surpreendente. Juntos, pai e filho embarcam em uma jornada emocional e eletrizante, enfrentando adversários gigantes em arenas espetaculares enquanto reconectam seus laços familiares.',
-  'image': 'assets/img/gigantesdeaço.png',
-  'reproducaoImage': 'assets/img/gigantesdeaçoreproducao.jpeg',
-},
-{
-  'title': 'Jumanji',
-  'year': '1995',
-  'ageRating': '10',
-  'duration': '1h 44m',
-  'description': 'Quando duas crianças descobrem um antigo jogo de tabuleiro chamado Jumanji, elas inadvertidamente libertam Alan Parrish, um homem preso no jogo por 26 anos. À medida que continuam a jogar, perigos selvagens como animais exóticos e desastres naturais começam a invadir o mundo real. Agora, eles devem unir forças para terminar o jogo e restaurar a normalidade, enfrentando mistérios, perigos e lições sobre coragem e trabalho em equipe.',
-  'image': 'assets/img/jumanji.png',
-  'reproducaoImage': 'assets/img/jumanjireproducao.jpg',
-},
-{
-  'title': 'Coringa',
-  'year': '2019',
-  'ageRating': '16',
-  'duration': '2h 2m',
-  'description': 'Arthur Fleck, um comediante de rua lutando com problemas psicológicos e uma vida marcada por rejeições, é empurrado para os limites em uma Gotham City decadente. À medida que sua sanidade se deteriora, ele se transforma no icônico Coringa, um símbolo de revolta para os marginalizados. O filme explora temas profundos como desigualdade social, saúde mental e o impacto de uma sociedade que negligencia os vulneráveis, criando uma história intensa e perturbadora.',
-  'image': 'assets/img/joker.jpg',
-  'reproducaoImage': 'assets/img/jokerreproducao.jpg',
-},
-{
-  'title': 'Rocky',
-  'year': '1976',
-  'ageRating': '12',
-  'duration': '2h',
-  'description': 'Rocky Balboa, um boxeador amador da Filadélfia, recebe uma oportunidade inesperada de desafiar o campeão mundial Apollo Creed em uma luta pelo título. Enfrentando descrença e dificuldades, Rocky embarca em um intenso treinamento físico e emocional com o objetivo de provar seu valor. O filme é uma inspiradora história de superação, determinação e autodescoberta, mostrando que o verdadeiro valor não está apenas na vitória, mas na coragem de lutar.',
-  'image': 'assets/img/rocky.jpg',
-  'reproducaoImage': 'assets/img/rockyreproducao.png',
-},
-{
-  'title': 'Titanic',
-  'year': '1997',
-  'ageRating': '12',
-  'duration': '3h 15m',
-  'description': 'Em 1912, o Titanic, o maior e mais luxuoso navio de sua época, parte em sua viagem inaugural. A bordo, Rose, uma jovem de família aristocrática, encontra Jack, um artista aventureiro de origem humilde. Apesar das barreiras sociais, os dois se apaixonam intensamente. No entanto, seu amor é testado pela tragédia quando o Titanic colide com um iceberg. O filme combina romance, drama e ação, capturando a magnitude da tragédia histórica e o poder transformador do amor.',
-  'image': 'assets/img/titanic.jpg',
-  'reproducaoImage': 'assets/img/titanicreproducao.jpg',
-},
-{
-  'title': 'Jurassic Park',
-  'year': '1993',
-  'ageRating': '10',
-  'duration': '2h 7m',
-  'description': 'Um bilionário visionário cria um parque temático inovador onde dinossauros geneticamente recriados vivem em um habitat controlado. Porém, quando o sistema de segurança falha, os visitantes do parque se veem em uma luta desesperada pela sobrevivência contra criaturas pré-históricas ferozes. Com efeitos visuais impressionantes e um enredo emocionante, o filme explora os perigos da ciência sem limites e a eterna fascinação humana pelo desconhecido.',
-  'image': 'assets/img/jurassicpark.jpg',
-  'reproducaoImage': 'assets/img/jurassicparkreproducao.jpg',
-},
+      'title': 'Gente Grande 2',
+      'year': '2013',
+      'ageRating': '12',
+      'duration': '1h 41m',
+      'description':
+          'Lenny e seus amigos decidem retornar à cidade onde cresceram...',
+      'image': 'assets/img/gentegrande2.png',
+      'reproducaoImage': 'assets/img/gentegrande2reproducao.jpg',
+    },
+    {
+      'title': 'Gigantes de Aço',
+      'year': '2011',
+      'ageRating': '12',
+      'duration': '2h 7m',
+      'description':
+          'Ambientado em um futuro onde humanos foram substituídos por robôs...',
+      'image': 'assets/img/gigantesdeaço.png',
+      'reproducaoImage': 'assets/img/gigantesdeaçoreproducao.jpeg',
+    },
+    {
+      'title': 'Jumanji',
+      'year': '1995',
+      'ageRating': '10',
+      'duration': '1h 44m',
+      'description':
+          'Quando duas crianças descobrem um antigo jogo de tabuleiro...',
+      'image': 'assets/img/jumanji.png',
+      'reproducaoImage': 'assets/img/jumanjireproducao.jpg',
+    },
+    {
+      'title': 'Coringa',
+      'year': '2019',
+      'ageRating': '16',
+      'duration': '2h 2m',
+      'description':
+          'Arthur Fleck, um comediante de rua lutando com problemas psicológicos...',
+      'image': 'assets/img/joker.jpg',
+      'reproducaoImage': 'assets/img/jokerreproducao.jpg',
+    },
+    {
+      'title': 'Rocky',
+      'year': '1976',
+      'ageRating': '12',
+      'duration': '2h',
+      'description': 'Rocky Balboa, um boxeador amador da Filadélfia...',
+      'image': 'assets/img/rocky.jpg',
+      'reproducaoImage': 'assets/img/rockyreproducao.png',
+    },
+    {
+      'title': 'Titanic',
+      'year': '1997',
+      'ageRating': '12',
+      'duration': '3h 15m',
+      'description': 'Em 1912, o Titanic parte em sua viagem inaugural...',
+      'image': 'assets/img/titanic.jpg',
+      'reproducaoImage': 'assets/img/titanicreproducao.jpg',
+    },
+    {
+      'title': 'Jurassic Park',
+      'year': '1993',
+      'ageRating': '10',
+      'duration': '2h 7m',
+      'description':
+          'Um bilionário cria um parque onde dinossauros geneticamente recriados vivem...',
+      'image': 'assets/img/jurassicpark.jpg',
+      'reproducaoImage': 'assets/img/jurassicparkreproducao.jpg',
+    },
   ];
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final args = ModalRoute.of(context)?.settings.arguments as String?;
+    if (args != null) {
+      setState(() {
+        perfilImagePath = args;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          // Imagem de fundo com degradê
           Positioned.fill(
             child: Column(
               children: [
                 Expanded(
                   child: Stack(
                     children: [
-                      // Imagem de fundo
                       Positioned.fill(
                         child: Image.asset(
                           'assets/img/prisionbreak.png',
                           fit: BoxFit.cover,
                         ),
                       ),
-                      // Degradê sobre a imagem
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
@@ -107,17 +122,29 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                      // Foto pequena para escolher perfil
                       Positioned(
-                        top: 40,
-                        left: 340,
+                        top: 60, 
+                        left: 20,
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, '/perfil'); // Tela de escolha de perfil
+                            Navigator.pushNamed(context,
+                                '/perfil');
                           },
-                          child: CircleAvatar(
-                            radius: 10,
-                            backgroundImage: AssetImage('assets/img/perfil.jpg'), // Altere para sua imagem
+                          child: Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: Color(0xFF65DC65),
+                                width: 1.0,
+                              ),
+                            ),
+                            child: CircleAvatar(
+                              radius: 20, 
+                              backgroundImage: AssetImage(
+                                perfilImagePath ??
+                                    'assets/img/padrao.png', 
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -168,20 +195,10 @@ class _HomeState extends State<Home> {
                                 ),
                                 ElevatedButton.icon(
                                   onPressed: () {
-                                    final prisonBreakData = {
-                                      'title': 'Prison Break',
-                                      'year': '2005',
-                                      'ageRating': '16',
-                                      'duration': '4 temporadas',
-                                      'description': 'Michael Scofield é um homem desesperado...',
-                                      'image': 'assets/img/prisionbreak.png',
-                                      'reproducaoImage': 'assets/img/prisionbreakreproducao.jpg',
-                                    };
-
                                     Navigator.pushNamed(
                                       context,
                                       '/reproducao',
-                                      arguments: prisonBreakData,
+                                      arguments: filmes[0],
                                     );
                                   },
                                   icon: Icon(Icons.play_arrow),
@@ -203,7 +220,8 @@ class _HomeState extends State<Home> {
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      Icon(Icons.info_outline, color: Colors.white),
+                                      Icon(Icons.info_outline,
+                                          color: Colors.white),
                                       SizedBox(height: 5),
                                       Text(
                                         'Detalhes',
@@ -272,16 +290,16 @@ class _HomeState extends State<Home> {
         onTap: (index) {
           switch (index) {
             case 0:
-              Navigator.pushReplacementNamed(context, '/home'); // Início
+              Navigator.pushReplacementNamed(context, '/home');
               break;
             case 1:
-              Navigator.pushReplacementNamed(context, '/pesquisa'); // Pesquisa
+              Navigator.pushReplacementNamed(context, '/pesquisa');
               break;
             case 2:
-              Navigator.pushReplacementNamed(context, '/embreve'); // Em Breve
+              Navigator.pushReplacementNamed(context, '/embreve');
               break;
             case 3:
-              Navigator.pushReplacementNamed(context, '/baixados'); // Baixados
+              Navigator.pushReplacementNamed(context, '/baixados');
               break;
           }
         },
@@ -294,7 +312,7 @@ class PreviewCard extends StatelessWidget {
   final String imageUrl;
   final VoidCallback onTap;
 
-  PreviewCard({required this.imageUrl, required this.onTap});
+  const PreviewCard({required this.imageUrl, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
